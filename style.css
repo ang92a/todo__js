@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    font-family: Inter;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.todo {
+    width: 594px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.16);
+    margin: 0 auto;
+}
+
+.form__wrapper {
+    padding: 24px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    height: 38px;
+    width: 356px;
+    border-radius: 4px;
+    border: 1px solid rgba(206, 212, 218, 1);
+    padding-left: 24px;
+}
+
+.button {
+    height: 39px;
+    width: 166px;
+    left: 598px;
+    top: 207px;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    background: rgba(39, 40, 41, 1);
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.info {
+    padding: 35px 0 11px;
+    display: none;
+}
+
+.showInfo {
+    display: block;
+}
+
+.li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.li:last-child {
+    margin-bottom: 0;
+}
+
+
+.label {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    margin-right: auto;
+    color: rgba(84, 89, 94, 1);
+    padding-left: 15px;
+}
+
+.checkLabel {
+    text-decoration: line-through;
+}
+
+
+.liButton {
+    cursor: pointer;
+    background: #fff;
+    border: none;
+}
+
+.liButton:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+
+.delete {
+    padding: 18px 24px;
+    display: none;
+}
+
+.showDelete {
+    display: flex;
+    justify-content: space-between;
+    background: #F5F5F5;
+    border-radius: 0px 0px 16px 16px;
+}
+
+.delEnd {
+    height: 39px;
+    width: 214px;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    background: #6C757D;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.delAll {
+    height: 39px;
+    width: 131px;
+    border-radius: 4px;
+    padding: 10px 16px 10px 16px;
+    background: #DC3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
