@@ -92,6 +92,7 @@ const deleteEnd = () => {
 
 renderList();
 
+delEnd.addEventListener("click", deleteEnd);
 button.addEventListener("click", addlist);
 delAll.addEventListener("click", deleteList);
-delEnd.addEventListener("click", deleteEnd);
+
