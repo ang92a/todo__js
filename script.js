@@ -51,19 +51,33 @@ function createList(obj) {
   const listItem = document.createElement("li");
   listItem.className = "li";
   listItem.innerHTML = `<input id="chk" type="checkbox">
-                        <div class="infotext">
-                        <label class="label" >${obj.text}</label>
-                        </div>
+                        <label class="label">${obj.text}</label>
+                        <input type="text" class="textareaInput">
                         <button class="liButtonEdit">✏️</button>
+                        <button class="liButtonOk">✅</button>
                         <button class="liButtonDel">❌</button>`;
+  let liButtonOk = listItem.querySelector(".liButtonOk");
+  let label = listItem.querySelector(".label");
+  let textareaInput = listItem.querySelector(".textareaInput");
+  let lbl = listItem.querySelector(".liButtonEdit");
   let chk = listItem.querySelector("#chk"); // Добавляем событие для чек
-  let lbl = listItem.querySelector(".label");
   let liButtonDel = listItem.querySelector(".liButtonDel");
   chk.checked = obj.status;
   chk.addEventListener("change", () => taggleCheck(obj.id)); // для того, чтобы обойти функцию событие, создаем анонимную функцию;
   // if (obj.status == true) lbl.classList.toggle("checkLabel"); // зачеркиваем текс
   liButtonDel.addEventListener("click", () => taggleDel(obj.id));
-  lbl.addEventListener("click", () => taggleEdit(obj.id));
+
+  lbl.addEventListener("click", () => {
+    label.style.display = "none";
+    lbl.style.display = "none";
+    liButtonOk.style.display = "block";
+    textareaInput.style.display = "block";
+    textareaInput.value = obj.text;
+    liButtonOk.addEventListener("click", () => {
+      obj.text = textareaInput.value;
+      renderList();
+    });
+  });
   return listItem;
 }
 

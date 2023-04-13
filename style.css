@@ -85,15 +85,12 @@
     margin-right: auto;
     color: rgba(84, 89, 94, 1);
     padding-left: 15px;
-
-}
-
-.infotext {
     width: 400px;
     word-break: break-all;
 }
 
-#chk:checked ~ .infotext {
+
+#chk:checked~.label {
     text-decoration: line-through;
 }
 
@@ -152,13 +149,41 @@ text-decoration: line-through;
 .liButtonDel {
     width: 20px;
     height: 20px;
-    align-self: center
+    align-self: center;
+    border: none;
+    background-color: transparent;
 }
 
 
 .liButtonEdit {
+    display: block;
     margin-right: 15px;
     width: 20px;
     height: 20px;
-    align-self: center
+    align-self: center;
+    border: none;
+    background-color: transparent;
+}
+
+.liButtonOk {
+    display: none;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+
+.textareaInput {
+    height: 30px;
+    width: 450px;
+    border-radius: 4px;
+    padding-left: 20px;
+    display: none;
+    margin-left: auto;
+    margin-right: 20px;
 }
