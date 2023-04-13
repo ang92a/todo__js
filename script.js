@@ -51,14 +51,14 @@ function createList(obj) {
   const listItem = document.createElement("li");
   listItem.className = "li";
   listItem.innerHTML = `<input id="chk" type="checkbox">
-                        <label class="label" for="chk">${obj.text}</label>
+                        <label class="label" >${obj.text}</label>
                         <button class="liButtonDel">❌</button>`;
   let chk = listItem.querySelector("#chk"); // Добавляем событие для чек
   let lbl = listItem.querySelector(".label");
   let liButtonDel = listItem.querySelector(".liButtonDel");
   chk.checked = obj.status;
   chk.addEventListener("change", () => taggleCheck(obj.id)); // для того, чтобы обойти функцию событие, создаем анонимную функцию;
-  if (obj.status == true) lbl.classList.toggle("checkLabel"); // зачеркиваем текс
+  // if (obj.status == true) lbl.classList.toggle("checkLabel"); // зачеркиваем текс
   liButtonDel.addEventListener("click", () => taggleDel(obj.id));
   return listItem;
 }
@@ -95,4 +95,3 @@ renderList();
 delEnd.addEventListener("click", deleteEnd);
 button.addEventListener("click", addlist);
 delAll.addEventListener("click", deleteList);
-

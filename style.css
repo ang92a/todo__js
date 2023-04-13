@@ -82,11 +82,14 @@
     margin-right: auto;
     color: rgba(84, 89, 94, 1);
     padding-left: 15px;
+    cursor: pointer;
 }
 
-.checkLabel {
+
+#chk:checked ~ .label {
     text-decoration: line-through;
 }
+
 
 
 .liButton {
