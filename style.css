@@ -55,10 +55,13 @@
 .info {
     padding: 35px 0 11px;
     display: none;
+
 }
 
 .showInfo {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
 }
 
 .li {
@@ -68,7 +71,7 @@
     margin-bottom: 25px;
 }
 
-.li:last-child {
+.li:first-child {
     margin-bottom: 0;
 }
 
@@ -82,14 +85,21 @@
     margin-right: auto;
     color: rgba(84, 89, 94, 1);
     padding-left: 15px;
-    cursor: pointer;
+
 }
 
+.infotext {
+    width: 400px;
+    word-break: break-all;
+}
 
-#chk:checked ~ .label {
+#chk:checked ~ .infotext {
     text-decoration: line-through;
 }
 
+/* .checkLabel{
+text-decoration: line-through;
+} */
 
 
 .liButton {
@@ -136,4 +146,19 @@
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+
+.liButtonDel {
+    width: 20px;
+    height: 20px;
+    align-self: center
+}
+
+
+.liButtonEdit {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    align-self: center
 }
